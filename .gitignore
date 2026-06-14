@@ -1,0 +1,40 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build folders
+bin/
+obj/
+out/
+
+# Logs
+*.log
+
+# Debug / Release files
+Debug/
+Release/
+
+# ASP.NET / .NET
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Entity Framework
+Migrations/*Designer.cs
+
+# User secrets
+secrets.json
+
+
+# Publish output
+publish/
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
