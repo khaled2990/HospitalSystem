@@ -1,0 +1,45 @@
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+
+# .NET Core / ASP.NET
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# EF Core
+Migrations/*Designer.cs
+
+# User secrets
+secrets.json
+appsettings.Development.json
+
+# Rider / JetBrains
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Publish output
+publish/
+
+# Node (لو عندك frontend)
+node_modules/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
