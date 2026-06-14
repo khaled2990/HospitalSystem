@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Hospital\\HospitalSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E37FF783-835A-4B80-87DD-F794E6884CDA}|Infrastructure\\Persistence\\Persistence.csproj|e:\\hospital\\hospitalsystem\\infrastructure\\persistence\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E37FF783-835A-4B80-87DD-F794E6884CDA}|Infrastructure\\Persistence\\Persistence.csproj|solutionrelative:infrastructure\\persistence\\repository\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09D727AB-D251-46A1-A4F0-CA1B526C8A94}|HospitalSystem\\HospitalSystem.csproj|e:\\hospital\\hospitalsystem\\hospitalsystem\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09D727AB-D251-46A1-A4F0-CA1B526C8A94}|HospitalSystem\\HospitalSystem.csproj|solutionrelative:hospitalsystem\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{761A3A11-06F6-4EB0-85A6-984E15191ABE}|Core\\Service\\Service.csproj|e:\\hospital\\hospitalsystem\\core\\service\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761A3A11-06F6-4EB0-85A6-984E15191ABE}|Core\\Service\\Service.csproj|solutionrelative:core\\service\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29DED91C-179A-4B84-8E0A-D01C419AE144}|Core\\DomainLayer\\DomainLayer.csproj|e:\\hospital\\hospitalsystem\\core\\domainlayer\\contracts\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29DED91C-179A-4B84-8E0A-D01C419AE144}|Core\\DomainLayer\\DomainLayer.csproj|solutionrelative:core\\domainlayer\\contracts\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF00959E-4A20-448C-953D-D195CC11A3A8}|Core\\ServiceAbstraction\\ServiceAbstraction.csproj|e:\\hospital\\hospitalsystem\\core\\serviceabstraction\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF00959E-4A20-448C-953D-D195CC11A3A8}|Core\\ServiceAbstraction\\ServiceAbstraction.csproj|solutionrelative:core\\serviceabstraction\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42B8A3BE-9E57-4224-9BE3-DB69552CA927}|Shared\\Shared.csproj|e:\\hospital\\hospitalsystem\\shared\\dto\\updatepatientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42B8A3BE-9E57-4224-9BE3-DB69552CA927}|Shared\\Shared.csproj|solutionrelative:shared\\dto\\updatepatientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPatientRepository.cs",
+              "DocumentMoniker": "E:\\Hospital\\HospitalSystem\\Core\\DomainLayer\\Contracts\\IPatientRepository.cs",
+              "RelativeDocumentMoniker": "Core\\DomainLayer\\Contracts\\IPatientRepository.cs",
+              "ToolTip": "E:\\Hospital\\HospitalSystem\\Core\\DomainLayer\\Contracts\\IPatientRepository.cs",
+              "RelativeToolTip": "Core\\DomainLayer\\Contracts\\IPatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T22:23:02.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "E:\\Hospital\\HospitalSystem\\Infrastructure\\Persistence\\Repository\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Repository\\PatientRepository.cs",
+              "ToolTip": "E:\\Hospital\\HospitalSystem\\Infrastructure\\Persistence\\Repository\\PatientRepository.cs*",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Repository\\PatientRepository.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDwAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:45:36.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdatePatientDto.cs",
+              "DocumentMoniker": "E:\\Hospital\\HospitalSystem\\Shared\\DTO\\UpdatePatientDto.cs",
+              "RelativeDocumentMoniker": "Shared\\DTO\\UpdatePatientDto.cs",
+              "ToolTip": "E:\\Hospital\\HospitalSystem\\Shared\\DTO\\UpdatePatientDto.cs",
+              "RelativeToolTip": "Shared\\DTO\\UpdatePatientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:43:41.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPatientService.cs",
+              "DocumentMoniker": "E:\\Hospital\\HospitalSystem\\Core\\ServiceAbstraction\\IPatientService.cs",
+              "RelativeDocumentMoniker": "Core\\ServiceAbstraction\\IPatientService.cs",
+              "ToolTip": "E:\\Hospital\\HospitalSystem\\Core\\ServiceAbstraction\\IPatientService.cs",
+              "RelativeToolTip": "Core\\ServiceAbstraction\\IPatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:38:45.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "E:\\Hospital\\HospitalSystem\\HospitalSystem\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "HospitalSystem\\Controllers\\PatientController.cs",
+              "ToolTip": "E:\\Hospital\\HospitalSystem\\HospitalSystem\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "HospitalSystem\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwJEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:37:13.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "E:\\Hospital\\HospitalSystem\\Core\\Service\\PatientService.cs",
+              "RelativeDocumentMoniker": "Core\\Service\\PatientService.cs",
+              "ToolTip": "E:\\Hospital\\HospitalSystem\\Core\\Service\\PatientService.cs",
+              "RelativeToolTip": "Core\\Service\\PatientService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:03:16.429Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
