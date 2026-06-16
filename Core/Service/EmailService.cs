@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using ServiceAbstraction;
 using MimeKit;
 using MailKit.Net.Smtp;
-using Microsoft.Extensions.Configuration; // هذا هو السيرفر الجديد من MailKit
+using Microsoft.Extensions.Configuration; 
 
 namespace Service
 {

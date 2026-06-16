@@ -78,7 +78,7 @@ namespace Service
             var existingUser = await _userManager.FindByEmailAsync(registerDto.Email);
             if (existingUser != null)
             {
-                throw new Exception("هذا البريد الإلكتروني مسجل بالفعل!");
+                throw new Exception("This email is already registered!");
             }
 
             var user = new ApplicationUser()
@@ -105,7 +105,7 @@ namespace Service
                 "Confirm Email",
                 link);
             return new UserDto()
-            {
+            { 
                 DisPlayName = user.DisPlayName,
                 Email = user.Email!,
                 Token =await CreateToken(user)

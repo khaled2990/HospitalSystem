@@ -54,9 +54,10 @@ namespace HospitalSystem
             builder.Services.AddHttpClient();
             builder.Services.AddAuthentication(config =>
             {
-                config.DefaultAuthenticateScheme=JwtBearerDefaults.AuthenticationScheme;
-                config.DefaultChallengeScheme=JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(option=> {
+                config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(option =>
+            {
 
                 option.TokenValidationParameters = new TokenValidationParameters()
                 {
@@ -64,8 +65,8 @@ namespace HospitalSystem
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidIssuer = builder.Configuration["JWT:issuer"],
-                    ValidAudience= builder.Configuration["JWT:audience"],
-                    IssuerSigningKey =new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecretKey"]!)) 
+                    ValidAudience = builder.Configuration["JWT:audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecretKey"]!))
                 };
 
             });
@@ -76,13 +77,12 @@ namespace HospitalSystem
             })
   .AddEntityFrameworkStores<IdentityDbContext>()
   .AddDefaultTokenProviders();
-            // builder.Services.AddControllers()
-            //.AddApplicationPart(typeof(DoctorController).Assembly);
+
             #endregion
 
             var app = builder.Build();
-            var scope=app.Services.CreateScope();
-            var dataSeed=scope.ServiceProvider.GetRequiredService<IDataSeeding>();
+            var scope = app.Services.CreateScope();
+            var dataSeed = scope.ServiceProvider.GetRequiredService<IDataSeeding>();
             await dataSeed.IdentityDataSeeding();
 
             #region Configure the HTTP request pipeline.
@@ -102,7 +102,7 @@ namespace HospitalSystem
             app.UseAuthorization();
 
 
-            app.MapControllers(); 
+            app.MapControllers();
             #endregion
 
             app.Run();
