@@ -11,5 +11,6 @@ namespace ServiceAbstraction
         public IDoctorService doctorService { get; }
         public IAuthenticationService authenticationService { get; }
         public IPatientService patientService { get; }
+        public IEmailService emailService { get; }
     }
 }

@@ -10,7 +10,7 @@ namespace ServiceAbstraction
     public interface IAuthenticationService
     {
         public Task<UserDto> Login(LoginDto loginDto);
-        public Task<UserDto> Register(RegisterDto registerDto);
+        public Task<UserDto> Register(RegisterDto registerDto, string baseUrl);
         public Task<bool> CheckEmail(string email);
         public Task<UserDto> GetCurrentUser(string email);
     }

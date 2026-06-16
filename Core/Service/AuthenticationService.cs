@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using ServiceAbstraction;
 using Shared.DTO;
 using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
@@ -18,11 +19,13 @@ namespace Service
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly IEmailService _emailService;
 
-        public AuthenticationService(UserManager<ApplicationUser> userManager ,IConfiguration configuration)
+        public AuthenticationService(UserManager<ApplicationUser> userManager ,IConfiguration configuration,IEmailService emailService)
         {
             _userManager = userManager;
             _configuration = configuration;
+            _emailService = emailService;
         }
 
         public async Task<bool> CheckEmail(string email)
@@ -49,12 +52,16 @@ namespace Service
         public async Task<UserDto> Login(LoginDto loginDto)
         {
             var user=await _userManager.FindByEmailAsync(loginDto.Email);
+
             if(user is null)
-                 throw new NotImplementedException();
+                throw new Exception("Invalid email or password");
+            
             var pass=_userManager.CheckPasswordAsync(user, loginDto.Password);
             if(pass is null)
-                throw new NotImplementedException();
+                throw new Exception("Invalid email or password");
 
+            if (!await _userManager.IsEmailConfirmedAsync(user))
+                throw new Exception("Please confirm your email first");
             return new UserDto()
             {
                 DisPlayName = user.DisPlayName,
@@ -66,14 +73,21 @@ namespace Service
 
        
 
-        public async Task<UserDto> Register(RegisterDto registerDto)
+        public async Task<UserDto> Register(RegisterDto registerDto, string baseUrl)
         {
+            var existingUser = await _userManager.FindByEmailAsync(registerDto.Email);
+            if (existingUser != null)
+            {
+                throw new Exception("هذا البريد الإلكتروني مسجل بالفعل!");
+            }
+
             var user = new ApplicationUser()
             {
                 Email = registerDto.Email,
                 UserName = registerDto.UserName,
                 DisPlayName = registerDto.DisPlayName,
-                PhoneNumber = registerDto.PhoneNumber
+                PhoneNumber = registerDto.PhoneNumber,
+                EmailConfirmed = false
             };
             var result=await _userManager.CreateAsync(user,registerDto.Password);
             if (!result.Succeeded)
@@ -83,7 +97,13 @@ namespace Service
 
                 throw new Exception(errors);
             }
-
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var encodedToken = Microsoft.AspNetCore.WebUtilities.WebEncoders.Base64UrlEncode(System.Text.Encoding.UTF8.GetBytes(token));
+            var link = $"{baseUrl}/api/Authentication/confirm-email?userId={user.Id}&token={encodedToken}";
+            await _emailService.SendEmailAsync(
+                user.Email!,
+                "Confirm Email",
+                link);
             return new UserDto()
             {
                 DisPlayName = user.DisPlayName,

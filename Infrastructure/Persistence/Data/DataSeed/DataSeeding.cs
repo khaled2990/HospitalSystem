@@ -34,7 +34,7 @@ namespace Persistence.Data.DataSeed
                 {
                     var use01 = new ApplicationUser()
                     {
-                        Email = "khadad819@gmail.com",
+                        Email = "khadad818gmail.com",
                         DisPlayName = "Khaled Hadad",
                         UserName = "KhaledHadad",
                         PhoneNumber = "01152916595"

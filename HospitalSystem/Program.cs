@@ -13,6 +13,7 @@ using Presentation;
 using Service;
 using Service.AutoMapper;
 using ServiceAbstraction;
+using System;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,16 +44,13 @@ namespace HospitalSystem
                 option.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection"));
             });
 
-            //builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-            //                .AddEntityFrameworkStores<IdentityDbContext>();
-            builder.Services.AddIdentityCore<ApplicationUser>()
-                            .AddRoles<IdentityRole>()
-                            .AddEntityFrameworkStores<IdentityDbContext>();
+
 
             builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
             builder.Services.AddScoped<IPatientRepository, PatientRepository>();
             builder.Services.AddScoped<IServiceMamager, ServiceManager>();
             builder.Services.AddScoped<IDataSeeding, DataSeeding>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddHttpClient();
             builder.Services.AddAuthentication(config =>
             {
@@ -71,8 +69,15 @@ namespace HospitalSystem
                 };
 
             });
-           // builder.Services.AddControllers()
-           //.AddApplicationPart(typeof(DoctorController).Assembly);
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+                options.SignIn.RequireConfirmedEmail = true;
+            })
+  .AddEntityFrameworkStores<IdentityDbContext>()
+  .AddDefaultTokenProviders();
+            // builder.Services.AddControllers()
+            //.AddApplicationPart(typeof(DoctorController).Assembly);
             #endregion
 
             var app = builder.Build();
